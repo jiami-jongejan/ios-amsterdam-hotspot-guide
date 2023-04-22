@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/jiami-jongejan/visualize-sort-algorithms">
-    <img src="https://github.com/jiami-jongejan/ios-amsterdam-hotspot-guide/blob/main/logo_text.png?raw=true" alt="Logo" width="120" height="auto">
+    <img src="https://github.com/jiami-jongejan/ios-amsterdam-hotspot-guide/blob/main/logo.png?raw=true" alt="Logo" width="120" height="auto">
   </a>
 
 <h3 align="center">Amsterdam's local guide iOS application</h3>
@@ -16,57 +16,20 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <div align="center">
-<img src="https://github.com/jiami-jongejan/visualize-sort-algorithms/blob/master/demo.gif" alt="Screenshot">
+Note: I am currently actively working on this application, it is under maintenance. Many features are currently not implemented yet and the text below gives an indication about the current roadmap of development.
 </div>
 <br/>
-This project is created as a simple web application to gain a first understanding of React. It generates an arbitrary array and the user can choose one of the well-known sorting algorithms such as bubble sort, selection sort, insertion sort and quick sort. At every iteration of the sorting process, the intermediate step is represented as an array and pushed to a stack representing all the intermediate steps. This stack is responsible for the animation displaying how each sorting algorithm operates in each iteration. The user can change the speed of how fast the animation frames are displaying and can change the size of the generated array.
-<br />
-<br />
-Quite a simple application, but it was fun to give me an insight into how React works. Created this project in my second year as a Computer Science sophomore student as independent work outside of my course work.
-
-
-### Built With
-
-[![React][React.js]][React-url] [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+A Swift application written from scratch. I created this project to improve my skills on mobile development, Swift and implementing a frontend and backend together. This application shows my favourite Amsterdam hotspots (restaurants, bars etc.) in one app. The backend is created with a RESTful API and the data is retrieved in the Swift application.
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-To get a local copy up and running follow these simple steps below.
-
-### Prerequisites
-
-Node.js is used in this application to be able to run it on a localhost. Check if Node.js is installed to be able to open the application.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/jiami-jongejan/visualize-sort-algorithms.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-3. Run the application on a local server, the application now will show up on a localhost.
-   ```sh
-   npm run start
-   ```
-
+to do: write text
 
 <!-- ROADMAP -->
 ## Features and to do's
-
-- [x] Bubble sort
-- [x] Insertion sort
-- [x] Selection sort
-- [x] Quick sort
+to do: write text
 
 <!-- LICENSE -->
 ## License
