@@ -18,4 +18,3 @@ struct HomeFeedView_Previews: PreviewProvider {
         HomeFeedView()
     }
 }
- 

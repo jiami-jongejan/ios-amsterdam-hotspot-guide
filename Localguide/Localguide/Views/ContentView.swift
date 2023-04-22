@@ -25,7 +25,7 @@ struct ContentView: View {
                 Image(systemName: "person.fill")
             }
         }
-    //.onAppear(perform: seedData)
+    .onAppear(perform: getPost)
     }
 }
 
