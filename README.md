@@ -29,7 +29,14 @@ to do: write text
 
 <!-- ROADMAP -->
 ## Features and to do's
-to do: write text
+- [x] REST api using MongoDB, Node.js, Express
+- [x] Implement backend API calls in Swift
+- [x] Retrieve the API calls
+- [ ] Store the API reponse in the Core Data
+- [ ] Create feed view 
+- [ ] Create map view
+- [ ] Create user login
+- [ ] User Design
 
 <!-- LICENSE -->
 ## License
