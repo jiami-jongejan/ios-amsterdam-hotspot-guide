@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/jiami-jongejan/visualize-sort-algorithms">
-    <img src="https://github.com/jiami-jongejan/ios-amsterdam-hotspot-guide/blob/main/logo.png?raw=true" alt="Logo" width="120" height="auto">
+    <img src="https://github.com/jiami-jongejan/ios-amsterdam-hotspot-guide/blob/main/logo copy.png?raw=true" alt="Logo" width="120" height="auto">
   </a>
 
 <h3 align="center">Amsterdam's local guide iOS application</h3>
