@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var backend: LocalguideBackend = LocalguideBackend()
 
     var body: some View {
         TabView {
@@ -25,7 +26,6 @@ struct ContentView: View {
                 Image(systemName: "person.fill")
             }
         }
-    .onAppear(perform: getPost)
     }
 }
 
@@ -33,6 +33,7 @@ struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
     ContentView()
-        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .environmentObject(LocalguideBackend())
     }
 }

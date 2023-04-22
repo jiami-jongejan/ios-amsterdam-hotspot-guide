@@ -16,65 +16,61 @@
 
 import Foundation
 
-let BACKEND_BASE_URL = "http://localhost:3000/api/"
 
-struct Hotspot:Codable{
-    let _id: String
-    let name: String
-    let description: String
-    let image: String
-    let keywords: Array<String>
-    let neighbourhood: String
-    let coordinates: Array<Float>
+let API_BASE_URL = "http://localhost:3000/api/"
+
+enum AppStatus: String {
+    case loading = "loading"
+    case login = "login"
+    case onboarding = "onboarding"
+    case ready = "ready"
 }
 
-func getPost() {
-    callAPI()
-    decodeAPI()
-}
-
-/* Method that calls all posts from the localhost.
- */
-func callAPI(){
-    guard let url = URL(string: BACKEND_BASE_URL + "getOne/6443f51c5df7c8b884fc1baf")
-    else {
-        return
+class LocalguideBackend: ObservableObject{
+    @Published var places: [Place]  = []
+    @Published var status: AppStatus
+    @Published var loadingPlaces: Bool = true
+    
+    init() {
+        self.status = AppStatus.loading
     }
-    let task = URLSession.shared.dataTask(with: url){
-        data, response, error in
-        
-        if let data = data, let string = String(data: data, encoding: .utf8){
-            print(string)
-        }
-    }
-
-    task.resume()
-}
-
-/* Method that calls all posts
- */
-func decodeAPI(){
-    guard let url = URL(string: BACKEND_BASE_URL + "getAll/")
-    else {
-        return
-    }
-
-    let task = URLSession.shared.dataTask(with: url){
-        data, response, error in
-        
-        let decoder = JSONDecoder()
-
-        if let data = data{
-            do{
-                let tasks = try decoder.decode([Hotspot].self, from: data)
-                tasks.forEach{ i in
-                    print(i)
+    
+    @Sendable func apiRequest(req: URLRequest, onDone: @escaping (_: Bool, _: Data?) -> Void) {
+        let task = URLSession.shared.dataTask(with: req) { data, response,
+            error in
+            if error != nil {
+                print("error")
+                onDone(false, nil)
+                return
+            }
+            guard let httpResponse =  response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                DispatchQueue.main.async {
+                    print("error")
                 }
-            }catch{
-                print(error)
+                onDone(false, nil)
+                return
+            }
+            onDone(true, data)
+        }
+        task.resume()
+    }
+    
+    @Sendable func loadPlaces(completed: Bool, onDone: @escaping (_: Bool, _: [Place]?) -> Void) {
+        let url = URL(string: API_BASE_URL + "getAll/")!
+        let request = URLRequest(url: url)
+        
+        self.apiRequest(req: request) { (success, data) in
+            if (success) {
+                do {
+                    let res = try JSONDecoder().decode([Place].self, from: data!)
+                    onDone(true, res)
+                    print(res)
+                } catch {
+                    onDone(false, nil)
+                    print("Unexpected error: \(error).")
+                }
             }
         }
     }
-    task.resume()
-
 }
