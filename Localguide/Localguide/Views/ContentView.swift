@@ -16,7 +16,7 @@ struct ContentView: View {
                 Image(systemName: "house.fill")
                     .foregroundColor(LocalguideColor.red)
             }
-            HomeFeedView().tabItem {
+            FullMapView().tabItem {
                 Image(systemName: "map.fill")
             }
             HomeFeedView().tabItem {

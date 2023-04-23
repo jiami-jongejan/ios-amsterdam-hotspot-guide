@@ -124,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				8E671A6D29F4989A00A56CEA /* Interfaces */,
-				8EE0793B29F4062400606E08 /* Controllers */,
 				8EE0793A29F4061200606E08 /* Views */,
 				8EE0793929F405FE00606E08 /* Managers */,
 				8EE0793829F404F400606E08 /* Utils */,
@@ -206,13 +205,6 @@
 				8E4B6FE129F4C3B200DEC71C /* FullMapView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		8EE0793B29F4062400606E08 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

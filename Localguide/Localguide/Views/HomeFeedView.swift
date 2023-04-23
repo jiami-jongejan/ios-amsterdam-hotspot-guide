@@ -29,8 +29,8 @@ struct HomeFeedView: View {
         } else {
             NavigationView{
                 VStack{
-                    ForEach(places, id: \.name) {place in
-                        PlaceCard(image: place.image, name: place.name)
+                    ForEach(places) {place in
+                        PlaceCard(name: place.name, image: place.image)
                     }
                 }
                 .refreshable {
