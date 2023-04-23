@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <div align="center">
-  <a href="https://github.com/jiami-jongejan/visualize-sort-algorithms">
+  <a href="https://github.com/jiami-jongejan/ios-amsterdam-hotspot-guides">
     <img src="https://github.com/jiami-jongejan/ios-amsterdam-hotspot-guide/blob/main/project_header_demo.png?raw=true" alt="Logo" width="100%" height="auto">
   </a>
 
