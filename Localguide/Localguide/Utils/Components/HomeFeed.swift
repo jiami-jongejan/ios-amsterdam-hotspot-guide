@@ -1,5 +1,5 @@
 //
-//  Cards.swift
+//  Components.swift
 //  Localguide
 //
 //  Created by Jiami Jongejan on 23/4/2023.
@@ -7,6 +7,41 @@
 
 import Foundation
 import SwiftUI
+
+
+/*
+ Discover category section
+ */
+
+struct CategoryIcon: View {
+    var categoryName : String
+    var categoryImgName : String
+
+    init(name: String, imgName: String) {
+        self.categoryName = name
+        self.categoryImgName = imgName
+    }
+    var body: some View{
+//        Spacer()
+        Image(systemName: categoryImgName)
+            .foregroundColor(LocalguideColor.red)
+            .frame(width: 50, height: 50)
+            .background(LocalguideColor.beige)
+            .cornerRadius(.infinity)
+            .overlay(
+                RoundedRectangle(cornerRadius: .infinity)
+                    .inset(by: 1) // inset value should be same as lineWidth in .stroke
+                    .stroke(LocalguideColor.red, lineWidth: 1)
+            )
+        Text(categoryName)
+            .font(.system(size: 12, weight: .semibold))
+            .foregroundColor(LocalguideColor.red)
+    }
+}
+
+/*
+ Discover cards section
+ */
 
 struct CardModifier: ViewModifier {
     func body(content: Content) -> some View {
@@ -17,7 +52,6 @@ struct CardModifier: ViewModifier {
 }
 
 struct PlaceCard: View {
-    
     var name: String
     var image: String
     
@@ -47,4 +81,3 @@ struct PlaceCard: View {
         .padding(.all, 10)
     }
 }
-

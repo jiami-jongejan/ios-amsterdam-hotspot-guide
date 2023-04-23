@@ -25,6 +25,7 @@ struct ContentView: View {
             HomeFeedView().tabItem {
                 Image(systemName: "person.fill")
             }
+            .environmentObject(backend)
         }
     }
 }

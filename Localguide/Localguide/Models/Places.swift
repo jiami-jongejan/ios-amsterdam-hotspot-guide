@@ -17,3 +17,7 @@ struct Place:Codable, Identifiable{
     let neighbourhood: String
     let coordinates: [Float]
 }
+
+struct Category: Hashable {
+    let name, imgName: String
+}
