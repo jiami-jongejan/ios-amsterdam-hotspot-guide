@@ -21,10 +21,10 @@
 		8E4B6FDE29F4C15F00DEC71C /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = 8E4B6FDD29F4C15F00DEC71C /* FontAwesome */; };
 		8E4B6FE029F4C15F00DEC71C /* tools in Frameworks */ = {isa = PBXBuildFile; productRef = 8E4B6FDF29F4C15F00DEC71C /* tools */; };
 		8E4B6FE229F4C3B200DEC71C /* FullMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B6FE129F4C3B200DEC71C /* FullMapView.swift */; };
+		8E4B6FE729F53FD500DEC71C /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B6FE629F53FD500DEC71C /* APIController.swift */; };
 		8E671A6F29F498A800A56CEA /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671A6E29F498A800A56CEA /* Places.swift */; };
 		8E671A7329F4AA2F00A56CEA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671A7229F4AA2F00A56CEA /* LoadingView.swift */; };
 		8EE0793729F402D500606E08 /* HomeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793629F402D400606E08 /* HomeFeedView.swift */; };
-		8EE0793D29F406C200606E08 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793C29F406C200606E08 /* APICaller.swift */; };
 		8EE0793F29F406CB00606E08 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793E29F406CB00606E08 /* Colors.swift */; };
 		8EE0794129F407FF00606E08 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0794029F407FF00606E08 /* ButtonStyle.swift */; };
 /* End PBXBuildFile section */
@@ -62,11 +62,11 @@
 		8E2AB57A29F340B300D1CF23 /* LocalguideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalguideUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8E4B6FD529F4BB2800DEC71C /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		8E4B6FE129F4C3B200DEC71C /* FullMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullMapView.swift; sourceTree = "<group>"; };
+		8E4B6FE629F53FD500DEC71C /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		8E671A6E29F498A800A56CEA /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		8E671A7229F4AA2F00A56CEA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8EE0793529F3E5E500606E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8EE0793629F402D400606E08 /* HomeFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedView.swift; sourceTree = "<group>"; };
-		8EE0793C29F406C200606E08 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		8EE0793E29F406CB00606E08 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8EE0794029F407FF00606E08 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,9 +123,9 @@
 		8E2AB55629F340AE00D1CF23 /* Localguide */ = {
 			isa = PBXGroup;
 			children = (
+				8E4B6FE529F53FC600DEC71C /* Controllers */,
 				8E671A6D29F4989A00A56CEA /* Models */,
 				8EE0793A29F4061200606E08 /* Views */,
-				8EE0793929F405FE00606E08 /* Service */,
 				8EE0793829F404F400606E08 /* Utils */,
 				8EE0793529F3E5E500606E08 /* Info.plist */,
 				8E2AB55729F340AE00D1CF23 /* LocalguideApp.swift */,
@@ -170,6 +170,14 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
+		8E4B6FE529F53FC600DEC71C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8E4B6FE629F53FD500DEC71C /* APIController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		8E671A6D29F4989A00A56CEA /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,14 +194,6 @@
 				8E4B6FD529F4BB2800DEC71C /* Cards.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		8EE0793929F405FE00606E08 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				8EE0793C29F406C200606E08 /* APICaller.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		8EE0793A29F4061200606E08 /* Views */ = {
@@ -348,13 +348,13 @@
 			files = (
 				8E2AB55D29F340AE00D1CF23 /* Localguide.xcdatamodeld in Sources */,
 				8EE0794129F407FF00606E08 /* ButtonStyle.swift in Sources */,
-				8EE0793D29F406C200606E08 /* APICaller.swift in Sources */,
 				8E671A7329F4AA2F00A56CEA /* LoadingView.swift in Sources */,
 				8E4B6FE229F4C3B200DEC71C /* FullMapView.swift in Sources */,
 				8EE0793729F402D500606E08 /* HomeFeedView.swift in Sources */,
 				8E4B6FD629F4BB2800DEC71C /* Cards.swift in Sources */,
 				8EE0793F29F406CB00606E08 /* Colors.swift in Sources */,
 				8E2AB55829F340AE00D1CF23 /* LocalguideApp.swift in Sources */,
+				8E4B6FE729F53FD500DEC71C /* APIController.swift in Sources */,
 				8E2AB55F29F340AE00D1CF23 /* ContentView.swift in Sources */,
 				8E2AB55A29F340AE00D1CF23 /* Persistence.swift in Sources */,
 				8E671A6F29F498A800A56CEA /* Places.swift in Sources */,
