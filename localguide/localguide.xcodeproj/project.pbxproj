@@ -123,9 +123,9 @@
 		8E2AB55629F340AE00D1CF23 /* Localguide */ = {
 			isa = PBXGroup;
 			children = (
-				8E671A6D29F4989A00A56CEA /* Interfaces */,
+				8E671A6D29F4989A00A56CEA /* Models */,
 				8EE0793A29F4061200606E08 /* Views */,
-				8EE0793929F405FE00606E08 /* Managers */,
+				8EE0793929F405FE00606E08 /* Service */,
 				8EE0793829F404F400606E08 /* Utils */,
 				8EE0793529F3E5E500606E08 /* Info.plist */,
 				8E2AB55729F340AE00D1CF23 /* LocalguideApp.swift */,
@@ -170,12 +170,12 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
-		8E671A6D29F4989A00A56CEA /* Interfaces */ = {
+		8E671A6D29F4989A00A56CEA /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8E671A6E29F498A800A56CEA /* Places.swift */,
 			);
-			path = Interfaces;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8EE0793829F404F400606E08 /* Utils */ = {
@@ -188,12 +188,12 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		8EE0793929F405FE00606E08 /* Managers */ = {
+		8EE0793929F405FE00606E08 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				8EE0793C29F406C200606E08 /* APICaller.swift */,
 			);
-			path = Managers;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		8EE0793A29F4061200606E08 /* Views */ = {
