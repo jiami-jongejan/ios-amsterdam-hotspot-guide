@@ -1,14 +1,10 @@
 <!-- PROJECT LOGO -->
 <div align="center">
-  <a href="https://github.com/jiami-jongejan/visualize-sort-algorithms">
-    <img src="https://github.com/jiami-jongejan/ios-amsterdam-hotspot-guide/blob/main/logo copy.png?raw=true" alt="Logo" width="120" height="auto">
+  <a href="https://github.com/jiami-jongejan/ios-amsterdam-hotspot-guides">
+    <img src="https://github.com/jiami-jongejan/ios-amsterdam-hotspot-guide/blob/main/project_header_demo.png?raw=true" alt="Logo" width="100%" height="auto">
   </a>
 
 <h3 align="center">Amsterdam's local guide iOS application</h3>
-
-  <p align="center">
-    Mobile application sharing popular hotspots in Amsterdam
-    <br />
   </p>
 </div>
 
