@@ -16,7 +16,12 @@
 		8E2AB56F29F340B300D1CF23 /* LocalguideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AB56E29F340B300D1CF23 /* LocalguideTests.swift */; };
 		8E2AB57929F340B300D1CF23 /* LocalguideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AB57829F340B300D1CF23 /* LocalguideUITests.swift */; };
 		8E2AB57B29F340B300D1CF23 /* LocalguideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AB57A29F340B300D1CF23 /* LocalguideUITestsLaunchTests.swift */; };
+		8E4B6FD629F4BB2800DEC71C /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B6FD529F4BB2800DEC71C /* Cards.swift */; };
+		8E4B6FDB29F4C0B100DEC71C /* FontAwesomeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8E4B6FDA29F4C0B100DEC71C /* FontAwesomeSwift */; };
+		8E4B6FDE29F4C15F00DEC71C /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = 8E4B6FDD29F4C15F00DEC71C /* FontAwesome */; };
+		8E4B6FE029F4C15F00DEC71C /* tools in Frameworks */ = {isa = PBXBuildFile; productRef = 8E4B6FDF29F4C15F00DEC71C /* tools */; };
 		8E671A6F29F498A800A56CEA /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671A6E29F498A800A56CEA /* Places.swift */; };
+		8E671A7329F4AA2F00A56CEA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671A7229F4AA2F00A56CEA /* LoadingView.swift */; };
 		8EE0793729F402D500606E08 /* HomeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793629F402D400606E08 /* HomeFeedView.swift */; };
 		8EE0793D29F406C200606E08 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793C29F406C200606E08 /* APICaller.swift */; };
 		8EE0793F29F406CB00606E08 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793E29F406CB00606E08 /* Colors.swift */; };
@@ -54,7 +59,9 @@
 		8E2AB57429F340B300D1CF23 /* LocalguideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalguideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E2AB57829F340B300D1CF23 /* LocalguideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalguideUITests.swift; sourceTree = "<group>"; };
 		8E2AB57A29F340B300D1CF23 /* LocalguideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalguideUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8E4B6FD529F4BB2800DEC71C /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		8E671A6E29F498A800A56CEA /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		8E671A7229F4AA2F00A56CEA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8EE0793529F3E5E500606E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8EE0793629F402D400606E08 /* HomeFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedView.swift; sourceTree = "<group>"; };
 		8EE0793C29F406C200606E08 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -67,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4B6FE029F4C15F00DEC71C /* tools in Frameworks */,
+				8E4B6FDB29F4C0B100DEC71C /* FontAwesomeSwift in Frameworks */,
+				8E4B6FDE29F4C15F00DEC71C /* FontAwesome in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +100,7 @@
 		8E2AB54B29F340AE00D1CF23 = {
 			isa = PBXGroup;
 			children = (
+				8E4B6FD729F4BFF900DEC71C /* Packages */,
 				8E2AB55629F340AE00D1CF23 /* Localguide */,
 				8E2AB56D29F340B300D1CF23 /* LocalguideTests */,
 				8E2AB57729F340B300D1CF23 /* LocalguideUITests */,
@@ -151,6 +162,13 @@
 			path = LocalguideUITests;
 			sourceTree = "<group>";
 		};
+		8E4B6FD729F4BFF900DEC71C /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		8E671A6D29F4989A00A56CEA /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +182,7 @@
 			children = (
 				8EE0793E29F406CB00606E08 /* Colors.swift */,
 				8EE0794029F407FF00606E08 /* ButtonStyle.swift */,
+				8E4B6FD529F4BB2800DEC71C /* Cards.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -181,6 +200,7 @@
 			children = (
 				8EE0793629F402D400606E08 /* HomeFeedView.swift */,
 				8E2AB55E29F340AE00D1CF23 /* ContentView.swift */,
+				8E671A7229F4AA2F00A56CEA /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +228,11 @@
 			dependencies = (
 			);
 			name = Localguide;
+			packageProductDependencies = (
+				8E4B6FDA29F4C0B100DEC71C /* FontAwesomeSwift */,
+				8E4B6FDD29F4C15F00DEC71C /* FontAwesome */,
+				8E4B6FDF29F4C15F00DEC71C /* tools */,
+			);
 			productName = Localguide;
 			productReference = 8E2AB55429F340AE00D1CF23 /* Localguide.app */;
 			productType = "com.apple.product-type.application";
@@ -280,6 +305,10 @@
 				Base,
 			);
 			mainGroup = 8E2AB54B29F340AE00D1CF23;
+			packageReferences = (
+				8E4B6FD929F4C0B100DEC71C /* XCRemoteSwiftPackageReference "Font-Awesome-Swift" */,
+				8E4B6FDC29F4C15F00DEC71C /* XCRemoteSwiftPackageReference "FontAwesome" */,
+			);
 			productRefGroup = 8E2AB55529F340AE00D1CF23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -325,7 +354,9 @@
 				8E2AB55D29F340AE00D1CF23 /* Localguide.xcdatamodeld in Sources */,
 				8EE0794129F407FF00606E08 /* ButtonStyle.swift in Sources */,
 				8EE0793D29F406C200606E08 /* APICaller.swift in Sources */,
+				8E671A7329F4AA2F00A56CEA /* LoadingView.swift in Sources */,
 				8EE0793729F402D500606E08 /* HomeFeedView.swift in Sources */,
+				8E4B6FD629F4BB2800DEC71C /* Cards.swift in Sources */,
 				8EE0793F29F406CB00606E08 /* Colors.swift in Sources */,
 				8E2AB55829F340AE00D1CF23 /* LocalguideApp.swift in Sources */,
 				8E2AB55F29F340AE00D1CF23 /* ContentView.swift in Sources */,
@@ -485,6 +516,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Localguide/Preview Content\"";
+				DEVELOPMENT_TEAM = PE2EGT8MUD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Localguide/Info.plist;
@@ -522,6 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Localguide/Preview Content\"";
+				DEVELOPMENT_TEAM = PE2EGT8MUD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Localguide/Info.plist;
@@ -676,6 +709,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E4B6FD929F4C0B100DEC71C /* XCRemoteSwiftPackageReference "Font-Awesome-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/trevor-sonic/Font-Awesome-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		8E4B6FDC29F4C15F00DEC71C /* XCRemoteSwiftPackageReference "FontAwesome" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thii/FontAwesome.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E4B6FDA29F4C0B100DEC71C /* FontAwesomeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E4B6FD929F4C0B100DEC71C /* XCRemoteSwiftPackageReference "Font-Awesome-Swift" */;
+			productName = FontAwesomeSwift;
+		};
+		8E4B6FDD29F4C15F00DEC71C /* FontAwesome */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E4B6FDC29F4C15F00DEC71C /* XCRemoteSwiftPackageReference "FontAwesome" */;
+			productName = FontAwesome;
+		};
+		8E4B6FDF29F4C15F00DEC71C /* tools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E4B6FDC29F4C15F00DEC71C /* XCRemoteSwiftPackageReference "FontAwesome" */;
+			productName = tools;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8E2AB55B29F340AE00D1CF23 /* Localguide.xcdatamodeld */ = {

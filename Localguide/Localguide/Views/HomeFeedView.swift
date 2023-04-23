@@ -24,18 +24,18 @@ struct HomeFeedView: View {
     
     var body: some View {
         if(self.loadingPlaces) {
-            Text("Loading")
+            LoadingView()
                 .onAppear(perform: self.fetchPlaces)
-        }
-        else {
-            VStack{
-                List(places, id: \.name) {place in
-                    Text(place.name)
+        } else {
+            NavigationView{
+                VStack{
+                    ForEach(places, id: \.name) {place in
+                        PlaceCard(image: place.image, name: place.name)
+                    }
                 }
-            }
-            .background(LocalguideColor.beige)
-            .refreshable {
-                self.fetchPlaces()
+                .refreshable {
+                    self.fetchPlaces()
+                }
             }
         }
     }
