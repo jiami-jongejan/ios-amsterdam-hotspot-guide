@@ -16,6 +16,8 @@ struct Place:Codable, Identifiable{
     let keywords: [String]
     let neighbourhood: String
     let coordinates: [Float]
+    let address: String
+    let rating: String
 }
 
 struct Category: Hashable {

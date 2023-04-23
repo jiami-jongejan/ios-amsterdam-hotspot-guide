@@ -17,13 +17,18 @@
 		8E2AB57929F340B300D1CF23 /* LocalguideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AB57829F340B300D1CF23 /* LocalguideUITests.swift */; };
 		8E2AB57B29F340B300D1CF23 /* LocalguideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AB57A29F340B300D1CF23 /* LocalguideUITestsLaunchTests.swift */; };
 		8E4B6FD629F4BB2800DEC71C /* HomeFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B6FD529F4BB2800DEC71C /* HomeFeed.swift */; };
-		8E4B6FDB29F4C0B100DEC71C /* FontAwesomeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8E4B6FDA29F4C0B100DEC71C /* FontAwesomeSwift */; };
-		8E4B6FDE29F4C15F00DEC71C /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = 8E4B6FDD29F4C15F00DEC71C /* FontAwesome */; };
-		8E4B6FE029F4C15F00DEC71C /* tools in Frameworks */ = {isa = PBXBuildFile; productRef = 8E4B6FDF29F4C15F00DEC71C /* tools */; };
 		8E4B6FE229F4C3B200DEC71C /* FullMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B6FE129F4C3B200DEC71C /* FullMapView.swift */; };
 		8E4B6FE729F53FD500DEC71C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B6FE629F53FD500DEC71C /* Service.swift */; };
 		8E671A6F29F498A800A56CEA /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671A6E29F498A800A56CEA /* Places.swift */; };
 		8E671A7329F4AA2F00A56CEA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671A7229F4AA2F00A56CEA /* LoadingView.swift */; };
+		8EAD92BD29F5E0B100AB2253 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD92BB29F5E03000AB2253 /* Nunito-Bold.ttf */; };
+		8EAD92BF29F5E0B500AB2253 /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD92BC29F5E04900AB2253 /* Nunito-BoldItalic.ttf */; };
+		8EAD92C029F5E0B800AB2253 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD92BA29F5E02F00AB2253 /* Nunito-SemiBold.ttf */; };
+		8EB9B04029F5F93C002BE7FE /* SinglePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9B03F29F5F93B002BE7FE /* SinglePlaceView.swift */; };
+		8EB9B04229F5F952002BE7FE /* FilteredFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9B04129F5F951002BE7FE /* FilteredFeedView.swift */; };
+		8EB9B04429F5FA10002BE7FE /* PostPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9B04329F5FA10002BE7FE /* PostPlaceView.swift */; };
+		8EB9B04629F5FA20002BE7FE /* FavouritePlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9B04529F5FA20002BE7FE /* FavouritePlacesView.swift */; };
+		8EB9B04829F5FAFA002BE7FE /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EB9B04729F5FAC7002BE7FE /* Nunito-ExtraBold.ttf */; };
 		8EE0793729F402D500606E08 /* HomeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793629F402D400606E08 /* HomeFeedView.swift */; };
 		8EE0793F29F406CB00606E08 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793E29F406CB00606E08 /* Colors.swift */; };
 /* End PBXBuildFile section */
@@ -64,11 +69,14 @@
 		8E4B6FE629F53FD500DEC71C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		8E671A6E29F498A800A56CEA /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		8E671A7229F4AA2F00A56CEA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		8EBDC6C429F5D2B5006A681E /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
-		8EBDC6C529F5D2B5006A681E /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
-		8EBDC6C629F5D2B5006A681E /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
-		8EBDC6C729F5D2B5006A681E /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
-		8EBDC6C829F5D2B6006A681E /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		8EAD92BA29F5E02F00AB2253 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		8EAD92BB29F5E03000AB2253 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		8EAD92BC29F5E04900AB2253 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8EB9B03F29F5F93B002BE7FE /* SinglePlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlaceView.swift; sourceTree = "<group>"; };
+		8EB9B04129F5F951002BE7FE /* FilteredFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredFeedView.swift; sourceTree = "<group>"; };
+		8EB9B04329F5FA10002BE7FE /* PostPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPlaceView.swift; sourceTree = "<group>"; };
+		8EB9B04529F5FA20002BE7FE /* FavouritePlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePlacesView.swift; sourceTree = "<group>"; };
+		8EB9B04729F5FAC7002BE7FE /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		8EE0793529F3E5E500606E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8EE0793629F402D400606E08 /* HomeFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedView.swift; sourceTree = "<group>"; };
 		8EE0793E29F406CB00606E08 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -79,9 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E4B6FE029F4C15F00DEC71C /* tools in Frameworks */,
-				8E4B6FDB29F4C0B100DEC71C /* FontAwesomeSwift in Frameworks */,
-				8E4B6FDE29F4C15F00DEC71C /* FontAwesome in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,11 +205,10 @@
 		8EBDC6B329F5D1A7006A681E /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				8EBDC6C429F5D2B5006A681E /* Nunito-Bold.ttf */,
-				8EBDC6C629F5D2B5006A681E /* Nunito-Italic.ttf */,
-				8EBDC6C729F5D2B5006A681E /* Nunito-Regular.ttf */,
-				8EBDC6C529F5D2B5006A681E /* Nunito-SemiBold.ttf */,
-				8EBDC6C829F5D2B6006A681E /* Nunito-SemiBoldItalic.ttf */,
+				8EAD92BB29F5E03000AB2253 /* Nunito-Bold.ttf */,
+				8EB9B04729F5FAC7002BE7FE /* Nunito-ExtraBold.ttf */,
+				8EAD92BC29F5E04900AB2253 /* Nunito-BoldItalic.ttf */,
+				8EAD92BA29F5E02F00AB2253 /* Nunito-SemiBold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -226,6 +230,10 @@
 				8E2AB55E29F340AE00D1CF23 /* ContentView.swift */,
 				8E671A7229F4AA2F00A56CEA /* LoadingView.swift */,
 				8E4B6FE129F4C3B200DEC71C /* FullMapView.swift */,
+				8EB9B03F29F5F93B002BE7FE /* SinglePlaceView.swift */,
+				8EB9B04129F5F951002BE7FE /* FilteredFeedView.swift */,
+				8EB9B04329F5FA10002BE7FE /* PostPlaceView.swift */,
+				8EB9B04529F5FA20002BE7FE /* FavouritePlacesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,9 +255,6 @@
 			);
 			name = Localguide;
 			packageProductDependencies = (
-				8E4B6FDA29F4C0B100DEC71C /* FontAwesomeSwift */,
-				8E4B6FDD29F4C15F00DEC71C /* FontAwesome */,
-				8E4B6FDF29F4C15F00DEC71C /* tools */,
 			);
 			productName = Localguide;
 			productReference = 8E2AB55429F340AE00D1CF23 /* Localguide.app */;
@@ -324,8 +329,6 @@
 			);
 			mainGroup = 8E2AB54B29F340AE00D1CF23;
 			packageReferences = (
-				8E4B6FD929F4C0B100DEC71C /* XCRemoteSwiftPackageReference "Font-Awesome-Swift" */,
-				8E4B6FDC29F4C15F00DEC71C /* XCRemoteSwiftPackageReference "FontAwesome" */,
 			);
 			productRefGroup = 8E2AB55529F340AE00D1CF23 /* Products */;
 			projectDirPath = "";
@@ -344,7 +347,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E2AB56529F340B300D1CF23 /* Preview Assets.xcassets in Resources */,
+				8EAD92BD29F5E0B100AB2253 /* Nunito-Bold.ttf in Resources */,
+				8EAD92BF29F5E0B500AB2253 /* Nunito-BoldItalic.ttf in Resources */,
+				8EB9B04829F5FAFA002BE7FE /* Nunito-ExtraBold.ttf in Resources */,
 				8E2AB56129F340B300D1CF23 /* Assets.xcassets in Resources */,
+				8EAD92C029F5E0B800AB2253 /* Nunito-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,13 +378,17 @@
 			files = (
 				8E2AB55D29F340AE00D1CF23 /* Localguide.xcdatamodeld in Sources */,
 				8E671A7329F4AA2F00A56CEA /* LoadingView.swift in Sources */,
+				8EB9B04629F5FA20002BE7FE /* FavouritePlacesView.swift in Sources */,
+				8EB9B04029F5F93C002BE7FE /* SinglePlaceView.swift in Sources */,
 				8E4B6FE229F4C3B200DEC71C /* FullMapView.swift in Sources */,
 				8EE0793729F402D500606E08 /* HomeFeedView.swift in Sources */,
 				8E4B6FD629F4BB2800DEC71C /* HomeFeed.swift in Sources */,
 				8EE0793F29F406CB00606E08 /* Colors.swift in Sources */,
 				8E2AB55829F340AE00D1CF23 /* LocalguideApp.swift in Sources */,
+				8EB9B04429F5FA10002BE7FE /* PostPlaceView.swift in Sources */,
 				8E4B6FE729F53FD500DEC71C /* Service.swift in Sources */,
 				8E2AB55F29F340AE00D1CF23 /* ContentView.swift in Sources */,
+				8EB9B04229F5F952002BE7FE /* FilteredFeedView.swift in Sources */,
 				8E2AB55A29F340AE00D1CF23 /* Persistence.swift in Sources */,
 				8E671A6F29F498A800A56CEA /* Places.swift in Sources */,
 			);
@@ -727,43 +738,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8E4B6FD929F4C0B100DEC71C /* XCRemoteSwiftPackageReference "Font-Awesome-Swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/trevor-sonic/Font-Awesome-Swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-		8E4B6FDC29F4C15F00DEC71C /* XCRemoteSwiftPackageReference "FontAwesome" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/thii/FontAwesome.swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8E4B6FDA29F4C0B100DEC71C /* FontAwesomeSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8E4B6FD929F4C0B100DEC71C /* XCRemoteSwiftPackageReference "Font-Awesome-Swift" */;
-			productName = FontAwesomeSwift;
-		};
-		8E4B6FDD29F4C15F00DEC71C /* FontAwesome */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8E4B6FDC29F4C15F00DEC71C /* XCRemoteSwiftPackageReference "FontAwesome" */;
-			productName = FontAwesome;
-		};
-		8E4B6FDF29F4C15F00DEC71C /* tools */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8E4B6FDC29F4C15F00DEC71C /* XCRemoteSwiftPackageReference "FontAwesome" */;
-			productName = tools;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8E2AB55B29F340AE00D1CF23 /* Localguide.xcdatamodeld */ = {

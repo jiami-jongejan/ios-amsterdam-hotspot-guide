@@ -4,11 +4,10 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Nunito-Regular.ttf</string>
 		<string>Nunito-Bold.ttf</string>
+		<string>Nunito-ExtraBold.ttf</string>
 		<string>Nunito-SemiBold.ttf</string>
-		<string>Nunito-Italic.ttf</string>
-		<string>Nunito-SemiBoldItalic.ttf</string>
+		<string>Nunito-BoldItalic.ttf</string>
 	</array>
 </dict>
 </plist>

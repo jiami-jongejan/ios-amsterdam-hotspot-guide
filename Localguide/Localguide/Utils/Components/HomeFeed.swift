@@ -22,7 +22,6 @@ struct CategoryIcon: View {
         self.categoryImgName = imgName
     }
     var body: some View{
-//        Spacer()
         Image(systemName: categoryImgName)
             .foregroundColor(LocalguideColor.yellow)
             .frame(width: 50, height: 50)
@@ -41,7 +40,8 @@ struct CategoryIcon: View {
 struct CardModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .cornerRadius(20)
+            .cornerRadius(30)
+            .shadow(color: Color(red: 0.93, green: 0.93, blue: 0.93), radius: 4, x: 0.0, y: 2)
     }
     
 }
@@ -49,29 +49,83 @@ struct CardModifier: ViewModifier {
 struct PlaceCard: View {
     var name: String
     var image: String
+    var keywords: [String]
+    var rating: String
+    var neighbourhood: String
+    var ratingInt: Int
+    @State var counter = 0
+    
+    init (name: String, image: String, keywords: [String], rating: String, neighbourhood: String) {
+        self.name = name
+        self.image = image
+        self.keywords = keywords
+        self.rating = rating
+        self.neighbourhood = neighbourhood
+        self.ratingInt = Int(rating) ?? 0
+    }
     
     var body: some View {
         HStack(alignment: .center) {
             AsyncImage(url: URL(string: image)){ image in image.resizable()} placeholder: { ProgressView() }
-                .frame(width: 120, height: 120)
+                .frame(width: 150, height: 150)
+                .shadow(color: Color(red: 0.93, green: 0.93, blue: 0.93), radius: 4, x: 0.0, y: 2)
             VStack(alignment: .leading) {
+                
                 Text(name)
-                    .font(.system(size: 22, weight: .bold, design: .default))
-                    .foregroundColor(.white)
-                Text("test")
-                    .font(.system(size: 16, weight: .bold, design: .default))
-                    .foregroundColor(.gray)
-                HStack {
-                    Text("$" + String.init(format: "%0.2f", "test"))
-                        .font(.system(size: 16, weight: .bold, design: .default))
-                        .foregroundColor(.white)
-                        .padding(.top, 8)
+                    .font(.custom("Nunito-ExtraBold", size: 20))
+                    .foregroundColor(LocalguideColor.darkblue)
+                    .padding(.top, 3)
+                    .padding(.bottom, 6)
+                
+                HStack{
+                    ForEach(1 ... self.ratingInt, id:\.self) {_ in
+                        Image(systemName: "star.fill")
+                            .foregroundColor(LocalguideColor.darkblue)
+                            .font(.custom("Nunito-Bold", size: 8))
+                    }
                 }
-            }.padding(.trailing, 20)
+                .padding(.bottom, 5)
+                
+                HStack{
+                    Image(systemName: "map.fill")
+                        .foregroundColor(LocalguideColor.darkblue)
+                        .font(.custom("Nunito-Bold", size: 12))
+                    Text(neighbourhood)
+                        .font(.custom("Nunito-Bold", size: 16))
+                        .foregroundColor(LocalguideColor.darkblue)
+                }
+                
+                HStack {
+                    HStack{
+                        Image(systemName: "fork.knife")
+                            .foregroundColor(.white)
+                            .font(.custom("Nunito-Bold", size: 12))
+                        Text(keywords[0])
+                            .foregroundColor(.white)
+                            .font(.custom("Nunito-Bold", size: 12))
+                    }
+                    .padding(4)
+                    .background(LocalguideColor.darkblue)
+                    .cornerRadius(5)
+                    
+                    HStack{
+                        Image(systemName: "mustache.fill")
+                            .foregroundColor(.white)
+                            .font(.custom("Nunito-Bold", size: 12))
+                        Text(keywords[1])
+                            .foregroundColor(.white)
+                            .font(.custom("Nunito-Bold", size: 12))
+                    }
+                    .padding(4)
+                    .background(LocalguideColor.darkblue)
+                    .cornerRadius(5)
+                }
+            }
+            .padding(5)
             Spacer()
         }
         .frame(maxWidth: .infinity, alignment: .center)
-        .background(LocalguideColor.red)
+        .background(LocalguideColor.lightgreen)
         .modifier(CardModifier())
         .padding(.all, 10)
     }
