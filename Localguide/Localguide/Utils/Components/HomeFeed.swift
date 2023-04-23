@@ -24,17 +24,12 @@ struct CategoryIcon: View {
     var body: some View{
 //        Spacer()
         Image(systemName: categoryImgName)
-            .foregroundColor(LocalguideColor.red)
+            .foregroundColor(LocalguideColor.yellow)
             .frame(width: 50, height: 50)
-            .background(LocalguideColor.beige)
+            .background(LocalguideColor.red)
             .cornerRadius(.infinity)
-            .overlay(
-                RoundedRectangle(cornerRadius: .infinity)
-                    .inset(by: 1) // inset value should be same as lineWidth in .stroke
-                    .stroke(LocalguideColor.red, lineWidth: 1)
-            )
         Text(categoryName)
-            .font(.system(size: 12, weight: .semibold))
+            .font(.custom("Nunito-Bold", size: 12))
             .foregroundColor(LocalguideColor.red)
     }
 }

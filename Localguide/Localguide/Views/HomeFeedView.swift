@@ -29,15 +29,38 @@ struct HomeFeedView: View {
                 .onAppear(perform: self.fetchPlaces)
         } else {
             NavigationView{
-                ScrollView{
-                    DiscoverCategoriesView()
-                    RecommendationCardsView(arg: places)
-                    DiscoverCardsView(arg: places)
-                    .navigationTitle("What are you up to?")
-                    .refreshable {
-                        self.fetchPlaces()
+                ZStack {
+                    
+                    Image("HomeBg")
+                        .resizable()
+                        .edgesIgnoringSafeArea(.all)
+                    
+                    ScrollView{
+                        HStack{
+                            Image(systemName: "magnifyingglass")
+                            Text("Where do you want to go?")
+                            Spacer()
+                        }
+                        .font(.custom("Nunito-Bold", size: 14))
+                        .foregroundColor(LocalguideColor.darkblue)
+                        .padding()
+                        .background(Color.black.opacity(0.1))
+                        .cornerRadius(20)
+                        .padding(10)
+
+                        DiscoverCategoriesView()
+                        VStack {
+                            RecommendationCardsView(arg: places)
+                            DiscoverCardsView(arg: places)
+                        }
+                        .background(Color.white)
+                        .cornerRadius(20)
+                        .padding(.top, 40)
                     }
+                    
                 }
+                .refreshable { self.fetchPlaces() }
+                .navigationTitle("Discover")
             }
         }
     }
@@ -53,8 +76,8 @@ struct RecommendationCardsView: View {
         var body: some View {
             HStack() {
                 Text("Our recommendations")
-                    .font(.system(size:16, weight: .semibold))
-                    .foregroundColor(LocalguideColor.red)
+                    .font(.custom("Nunito-Bold", size: 16))
+                    .foregroundColor(LocalguideColor.darkblue)
                 Spacer()
             }.padding(.horizontal)
             .padding(.top)
@@ -66,7 +89,7 @@ struct RecommendationCardsView: View {
                             Spacer()
                                 .frame(width: 130, height: 150)
                                 .background(LocalguideColor.yellow)
-                                .cornerRadius(15)
+                                .cornerRadius(20)
                                 .padding(.bottom)
                         }
                     }
