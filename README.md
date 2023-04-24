@@ -16,13 +16,13 @@ Note: I am currently actively working on this application, it is under maintenan
 </div>
 <br/>
 A Swift application written from scratch. I created this project to improve my skills on mobile development, Swift and implementing a frontend and backend together. This application shows my favourite Amsterdam hotspots (restaurants, bars etc.) in one app. The backend is created with a RESTful API and the data is retrieved in the Swift application.
+<br/>
+Latest version
 
 <div align="center">
-Latests version
-
     <img src="https://github.com/jiami-jongejan/ios-amsterdam-hotspot-guide/blob/main/demo_v1.gif" alt="Logo" width="30%" height="auto">
   </a>
-  </div>
+ </div>
 
 
 <!-- GETTING STARTED -->
