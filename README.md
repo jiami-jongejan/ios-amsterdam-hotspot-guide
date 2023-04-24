@@ -17,6 +17,11 @@ Note: I am currently actively working on this application, it is under maintenan
 <br/>
 A Swift application written from scratch. I created this project to improve my skills on mobile development, Swift and implementing a frontend and backend together. This application shows my favourite Amsterdam hotspots (restaurants, bars etc.) in one app. The backend is created with a RESTful API and the data is retrieved in the Swift application.
 
+Latests version
+
+<div align="center">
+    <img src="https://github.com/jiami-jongejan/ios-amsterdam-hotspot-guide/blob/main/demo_v1.gif" alt="Logo" width="40%" height="auto">
+  </a>
 
 
 <!-- GETTING STARTED -->
@@ -32,11 +37,15 @@ On [Postman](https://www.postman.com/cloudy-shuttle-469413/workspace/localguide/
 - [x] REST api using MongoDB, Node.js, Express
 - [x] Implement backend API calls in Swift
 - [x] Retrieve the API calls
-- [ ] Store the API reponse in the Core Data
-- [ ] Create feed view 
-- [ ] Create map view
+- [x] Create UI in Figma 
+- [x] Create feed view 
+- [x] Create map view
+- [ ] Create filtered view
+- [ ] Create post place functionality
+- [ ] Store favourites using CoreData
+- [ ] Implement google login
+- [ ] Finished UI implementation
 - [ ] Create user login
-- [ ] User Design
 
 <!-- LICENSE -->
 ## License
