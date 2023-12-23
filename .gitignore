@@ -1,2 +1,42 @@
-
+# Xcode
 .DS_Store
+*.xcuserstate
+project.xcworkspace
+xcuserdata
+DerivedData/
+*.hmap
+*.ipa
+*.xcarchive
+*.swiftpm/xcode/package.resolved
+!default.xcworkspace
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# User Interface state
+*.swp
+*~
+*.lock
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Express.js
+.env
