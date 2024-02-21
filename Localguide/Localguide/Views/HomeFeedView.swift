@@ -17,7 +17,11 @@ struct HomeFeedView: View {
     func fetchPlaces(){
         self.backend.loadPlaces(completed: false) { (success, data) in
             DispatchQueue.main.async {
-                self.places = data!
+                if let placesData = data {
+                    self.places = placesData
+                } else {
+                    print("Failed to load places")
+                }
                 self.loadingPlaces = false
             }
         }
@@ -73,42 +77,58 @@ struct HomeFeedView: View {
 }
 
 struct RecommendationCardsView: View {
-        var cards : [Place]
+    var cards: [Place]
     
-        init(arg: [Place]) {
-            self.cards = arg
+    init(arg: [Place]) {
+        self.cards = arg
+    }
+    
+    var body: some View {
+        HStack() {
+            Text("Our recommendations")
+                .font(.custom("Nunito-ExtraBold", size: 20))
+                .foregroundColor(LocalguideColor.darkblue)
+            Spacer()
         }
-    
-        var body: some View {
-            HStack() {
-                Text("Our recommendations")
-                    .font(.custom("Nunito-ExtraBold", size: 20))
-                    .foregroundColor(LocalguideColor.darkblue)
-                Spacer()
-            }.padding(.horizontal)
-            .padding(.top)
-            
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack(spacing: 16){
-                    ForEach(cards) { place in
-                        VStack(spacing: 8){
-                            ZStack{
-                                AsyncImage(url: URL(string: place.image)){ image in image.resizable()} placeholder: { ProgressView() }
-                                    .frame(width: 230, height: 200)
+        .padding(.horizontal)
+        .padding(.top)
+        
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 16) {
+                ForEach(cards) { place in
+                    NavigationLink(destination: SinglePlaceView(place: place)) {
+                        VStack(spacing: 8) {
+                            ZStack {
+                                AsyncImage(url: URL(string: place.image)) { phase in
+                                    switch phase {
+                                        case .empty:
+                                            ProgressView()
+                                        case .success(let image):
+                                            image.resizable()
+                                        case .failure:
+                                            Image(systemName: "photo")
+                                                .resizable()
+                                        @unknown default:
+                                            Image(systemName: "photo")
+                                                .resizable()
+                                    }
+                                }
+                                .frame(width: 230, height: 200)
                             }
-                                .cornerRadius(30)
-                                .shadow(color: Color(red: 0.89, green: 0.89, blue: 0.89), radius: 4, x: 0.0, y: 2)
+                            .cornerRadius(30)
+                            .shadow(color: Color(red: 0.89, green: 0.89, blue: 0.89), radius: 4, x: 0.0, y: 2)
                             Text(place.name)
                                 .font(.custom("Nunito-Bold", size: 16))
                                 .foregroundColor(LocalguideColor.darkblue)
                         }
                     }
-                }.padding(.horizontal)
-                    .padding(.bottom, 20)
+                }
             }
+            .padding(.horizontal)
+            .padding(.bottom, 20)
         }
+    }
 }
-
 
 struct DiscoverCardsView: View {
         var cards : [Place]
@@ -132,6 +152,7 @@ struct DiscoverCategoriesView: View {
         .init(name: "Bar", imgName: "wineglass.fill"),
         .init(name: "Coffee", imgName: "cup.and.saucer.fill"),
         .init(name: "Party", imgName: "party.popper.fill"),
+        .init(name: "Outdoor", imgName: "sun.min.fill"),
         .init(name: "Outdoor", imgName: "sun.min.fill"),
         .init(name: "Fancy", imgName: "wand.and.stars"),
         .init(name: "Hipster", imgName: "mustache.fill")
