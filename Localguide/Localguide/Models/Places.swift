@@ -8,8 +8,7 @@
 import Foundation
 
 struct Place:Codable, Identifiable{
-    let id = UUID()
-    let _id: String
+    let id: String
     let name: String
     let description: String
     let image: String

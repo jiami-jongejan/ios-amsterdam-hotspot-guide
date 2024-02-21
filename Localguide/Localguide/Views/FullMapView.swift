@@ -37,7 +37,9 @@ struct FullMapView: View {
                      annotationItems: places
                  ) { place in
                     MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(place.coordinates[0]), longitude: CLLocationDegrees(place.coordinates[1]))) {
-                     PlaceAnnotationView()
+                        NavigationLink(destination: SinglePlaceView(place: place)) {
+                            PlaceAnnotationView()
+                        }
                    }
                  }
                     .edgesIgnoringSafeArea(.top)
@@ -55,7 +57,7 @@ struct PlaceAnnotationView: View {
       
       Image(systemName: "arrowtriangle.down.fill")
         .font(.caption)
-        .foregroundColor(.red)
+        .foregroundColor(LocalguideColor.red)
         .offset(x: 0, y: -5)
     }
   }

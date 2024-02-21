@@ -77,11 +77,13 @@ struct PlaceCard: View {
                     .padding(.top, 3)
                     .padding(.bottom, 6)
                 
-                HStack{
-                    ForEach(1 ... self.ratingInt, id:\.self) {_ in
-                        Image(systemName: "star.fill")
-                            .foregroundColor(LocalguideColor.darkblue)
-                            .font(.custom("Nunito-Bold", size: 8))
+                HStack {
+                    if self.ratingInt >= 1 {
+                        ForEach(1 ... self.ratingInt, id: \.self) { _ in
+                            Image(systemName: "star.fill")
+                                .foregroundColor(LocalguideColor.darkblue)
+                                .font(.custom("Nunito-Bold", size: 8))
+                        }
                     }
                 }
                 .padding(.bottom, 5)
