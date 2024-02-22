@@ -26,7 +26,7 @@ struct FullMapView: View {
             }
         }
     }
-        
+    
     var body: some View {
         if(self.loadingPlaces) {
             LoadingView()
@@ -34,31 +34,33 @@ struct FullMapView: View {
         } else {
             NavigationView{
                 Map(coordinateRegion: $region,
-                     annotationItems: places
-                 ) { place in
+                    annotationItems: places
+                ) { place in
                     MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(place.coordinates[0]), longitude: CLLocationDegrees(place.coordinates[1]))) {
                         NavigationLink(destination: SinglePlaceView(place: place)) {
-                            PlaceAnnotationView()
+                            PlaceAnnotationView(firstKeyword: place.keywords[0])
                         }
-                   }
-                 }
-                    .edgesIgnoringSafeArea(.top)
+                    }
                 }
+                .edgesIgnoringSafeArea(.top)
             }
         }
     }
+}
 
 struct PlaceAnnotationView: View {
-  var body: some View {
-    VStack(spacing: 0) {
-      Image(systemName: "mappin.circle.fill")
-        .font(.title)
-        .foregroundColor(LocalguideColor.red)
-      
-      Image(systemName: "arrowtriangle.down.fill")
-        .font(.caption)
-        .foregroundColor(LocalguideColor.red)
-        .offset(x: 0, y: -5)
+    var firstKeyword: String
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            Image(systemName: "mappin.circle.fill")
+                .font(.title)
+                .foregroundColor(LocalguideColor.red)
+            
+            Image(systemName: "arrowtriangle.down.fill")
+                .font(.caption)
+                .foregroundColor(LocalguideColor.red)
+                .offset(x: 0, y: -5)
+        }
     }
-  }
 }

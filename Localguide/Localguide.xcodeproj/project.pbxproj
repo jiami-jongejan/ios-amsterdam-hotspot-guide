@@ -31,6 +31,7 @@
 		8EB9B04829F5FAFA002BE7FE /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EB9B04729F5FAC7002BE7FE /* Nunito-ExtraBold.ttf */; };
 		8EE0793729F402D500606E08 /* HomeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793629F402D400606E08 /* HomeFeedView.swift */; };
 		8EE0793F29F406CB00606E08 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793E29F406CB00606E08 /* Colors.swift */; };
+		8EE6645B2B86C02A00C94F86 /* IconMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6645A2B86C02A00C94F86 /* IconMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		8EE0793529F3E5E500606E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8EE0793629F402D400606E08 /* HomeFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedView.swift; sourceTree = "<group>"; };
 		8EE0793E29F406CB00606E08 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8EE6645A2B86C02A00C94F86 /* IconMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				8EBDC6B329F5D1A7006A681E /* Font */,
 				8E4B6FE829F553E700DEC71C /* Components */,
 				8EE0793E29F406CB00606E08 /* Colors.swift */,
+				8EE6645A2B86C02A00C94F86 /* IconMapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				8E4B6FD629F4BB2800DEC71C /* HomeFeed.swift in Sources */,
 				8EE0793F29F406CB00606E08 /* Colors.swift in Sources */,
 				8E2AB55829F340AE00D1CF23 /* LocalguideApp.swift in Sources */,
+				8EE6645B2B86C02A00C94F86 /* IconMapper.swift in Sources */,
 				8EB9B04429F5FA10002BE7FE /* PostPlaceView.swift in Sources */,
 				8E4B6FE729F53FD500DEC71C /* Service.swift in Sources */,
 				8E2AB55F29F340AE00D1CF23 /* ContentView.swift in Sources */,

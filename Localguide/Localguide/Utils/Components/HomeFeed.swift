@@ -15,14 +15,12 @@ import SwiftUI
 
 struct CategoryIcon: View {
     var categoryName : String
-    var categoryImgName : String
 
-    init(name: String, imgName: String) {
+    init(name: String) {
         self.categoryName = name
-        self.categoryImgName = imgName
     }
     var body: some View{
-        Image(systemName: categoryImgName)
+        Image(systemName: IconMapper.iconName(forCategory: categoryName))
             .foregroundColor(LocalguideColor.yellow)
             .frame(width: 50, height: 50)
             .background(LocalguideColor.red)

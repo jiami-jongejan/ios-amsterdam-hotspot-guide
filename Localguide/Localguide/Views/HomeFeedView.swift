@@ -85,7 +85,7 @@ struct RecommendationCardsView: View {
     
     var body: some View {
         HStack() {
-            Text("Our recommendations")
+            Text("Jiami's recommendations")
                 .font(.custom("Nunito-ExtraBold", size: 20))
                 .foregroundColor(LocalguideColor.darkblue)
             Spacer()
@@ -140,22 +140,23 @@ struct DiscoverCardsView: View {
         var body: some View {
             VStack{
                 ForEach(cards) {place in
-                    PlaceCard(name: place.name, image: place.image, keywords: place.keywords, rating: place.rating, neighbourhood: place.neighbourhood)
+                    NavigationLink(destination: SinglePlaceView(place: place)) {
+                        PlaceCard(name: place.name, image: place.image, keywords: place.keywords, rating: place.rating, neighbourhood: place.neighbourhood)
+                    }
                 }
             }
         }
 }
 
 struct DiscoverCategoriesView: View {
-    let categories: [Category] = [
-        .init(name: "Restaurant", imgName: "fork.knife"),
-        .init(name: "Bar", imgName: "wineglass.fill"),
-        .init(name: "Coffee", imgName: "cup.and.saucer.fill"),
-        .init(name: "Party", imgName: "party.popper.fill"),
-        .init(name: "Outdoor", imgName: "sun.min.fill"),
-        .init(name: "Outdoor", imgName: "sun.min.fill"),
-        .init(name: "Fancy", imgName: "wand.and.stars"),
-        .init(name: "Hipster", imgName: "mustache.fill")
+    let categories: [String] = [
+        "Restaurant",
+        "Bar",
+        "Coffee",
+        "Party",
+        "Outdoor",
+        "Fancy",
+        "Hipster"
     ]
         
     var body: some View {
@@ -163,7 +164,7 @@ struct DiscoverCategoriesView: View {
                 HStack(spacing: 16){
                     ForEach(categories, id: \.self) { category in
                         VStack(spacing: 4){
-                            CategoryIcon(name: category.name, imgName: category.imgName)
+                            CategoryIcon(name: category)
                         }
                     }
                 }

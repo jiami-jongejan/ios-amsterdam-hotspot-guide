@@ -73,7 +73,9 @@ struct SinglePlaceContentView: View {
             name: "Café Caron",
             description: "French restaurant with a lovely atmosphere, great for a Burgundian dinner with some cheese and wine. It will give you the perfect Paris bistro vibes with amazing food.",
             image: "https://localguidestorage.blob.core.windows.net/images/cafecaron.JPG",
-            keywords: ["Drinks", "Cozy"], neighbourhood: "Pijp",
+            keywords: ["Drinks", "Cozy"],
+            dishes: [],
+            neighbourhood: "Pijp",
             coordinates: [52.37287436362199, 4.8894113883891634],
             address: "",
             rating: "4"
