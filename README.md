@@ -27,15 +27,12 @@ Latest version
 
 <!-- GETTING STARTED -->
 ## Getting Started
-The backend database is run on my own localhost. This database is created using MongoDB, Express and Node.js. If you would like to run this own localhost use the commands below.
-
-
-
-On [Postman](https://www.postman.com/cloudy-shuttle-469413/workspace/localguide/collection/11424816-580f89dc-9bd9-40c2-8319-d44eaef01f56?action=share&creator=11424816) I documented the CRUD operations with examples. The Postman `GET - Get all places` ([here](https://www.postman.com/cloudy-shuttle-469413/workspace/localguide/example/11424816-78bf1180-45ad-42bf-9685-dbe350dcf992)), includes an example showing all the JSON data that is also implemented on my own localhost. If you would like to run this application on your own environment, make sure that this is installed correctly to display the data.
+The backend database is currently in Azure Cosmos DB with images stored in Azure Blob Storage. You can find the api on [Postman](https://www.postman.com/cloudy-shuttle-469413/workspace/localguide/collection/11424816-580f89dc-9bd9-40c2-8319-d44eaef01f56?action=share&creator=11424816) I documented the CRUD operations with examples. The Postman `GET - Get all places` ([here](https://www.postman.com/cloudy-shuttle-469413/workspace/localguide/example/11424816-78bf1180-45ad-42bf-9685-dbe350dcf992)), includes an example showing all the JSON data. You can also find the get all [here](https://hotspot-backend.azurewebsites.net/getAll).
 
 <!-- ROADMAP -->
 ## Features and to do's
-- [x] REST api using MongoDB, Node.js, Express
+- [x] Database in cloud using Azure Cosmos DB
+- [x] Images stored in Azure Blob Storage
 - [x] Implement backend API calls in Swift
 - [x] Retrieve the API calls
 - [x] Create UI in Figma 
