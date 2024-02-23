@@ -32,6 +32,7 @@
 		8EE0793729F402D500606E08 /* HomeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793629F402D400606E08 /* HomeFeedView.swift */; };
 		8EE0793F29F406CB00606E08 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0793E29F406CB00606E08 /* Colors.swift */; };
 		8EE6645B2B86C02A00C94F86 /* IconMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6645A2B86C02A00C94F86 /* IconMapper.swift */; };
+		8EE6645D2B87483400C94F86 /* SinglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6645C2B87483400C94F86 /* SinglePlace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		8EE0793629F402D400606E08 /* HomeFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedView.swift; sourceTree = "<group>"; };
 		8EE0793E29F406CB00606E08 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8EE6645A2B86C02A00C94F86 /* IconMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconMapper.swift; sourceTree = "<group>"; };
+		8EE6645C2B87483400C94F86 /* SinglePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				8E4B6FD529F4BB2800DEC71C /* HomeFeed.swift */,
+				8EE6645C2B87483400C94F86 /* SinglePlace.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				8EB9B04029F5F93C002BE7FE /* SinglePlaceView.swift in Sources */,
 				8E4B6FE229F4C3B200DEC71C /* FullMapView.swift in Sources */,
 				8EE0793729F402D500606E08 /* HomeFeedView.swift in Sources */,
+				8EE6645D2B87483400C94F86 /* SinglePlace.swift in Sources */,
 				8E4B6FD629F4BB2800DEC71C /* HomeFeed.swift in Sources */,
 				8EE0793F29F406CB00606E08 /* Colors.swift in Sources */,
 				8E2AB55829F340AE00D1CF23 /* LocalguideApp.swift in Sources */,

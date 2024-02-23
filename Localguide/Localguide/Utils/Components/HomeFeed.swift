@@ -45,15 +45,16 @@ struct CardModifier: ViewModifier {
 }
 
 struct PlaceCard: View {
+    var id: Int
     var name: String
     var image: String
     var keywords: [String]
     var rating: String
     var neighbourhood: String
     var ratingInt: Int
-    @State var counter = 0
     
-    init (name: String, image: String, keywords: [String], rating: String, neighbourhood: String) {
+    init (id: String, name: String, image: String, keywords: [String], rating: String, neighbourhood: String) {
+        self.id = Int(id) ?? 0
         self.name = name
         self.image = image
         self.keywords = keywords
@@ -125,7 +126,7 @@ struct PlaceCard: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, alignment: .center)
-        .background(LocalguideColor.lightgreen)
+        .background(id % 2 == 0 ? LocalguideColor.lightgreen : LocalguideColor.lightblue)
         .modifier(CardModifier())
         .padding(.all, 10)
     }

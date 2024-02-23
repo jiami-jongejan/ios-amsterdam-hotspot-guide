@@ -141,7 +141,7 @@ struct DiscoverCardsView: View {
             VStack{
                 ForEach(cards) {place in
                     NavigationLink(destination: SinglePlaceView(place: place)) {
-                        PlaceCard(name: place.name, image: place.image, keywords: place.keywords, rating: place.rating, neighbourhood: place.neighbourhood)
+                        PlaceCard(id: place.id, name: place.name, image: place.image, keywords: place.keywords, rating: place.rating, neighbourhood: place.neighbourhood)
                     }
                 }
             }
