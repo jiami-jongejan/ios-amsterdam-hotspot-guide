@@ -13,6 +13,7 @@ struct Place:Codable, Identifiable{
     let description: String
     let image: String
     let keywords: [String]
+    let dishes: [String]
     let neighbourhood: String
     let coordinates: [Float]
     let address: String

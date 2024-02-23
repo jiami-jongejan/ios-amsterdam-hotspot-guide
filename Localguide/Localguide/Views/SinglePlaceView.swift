@@ -28,40 +28,10 @@ struct SinglePlaceView: View {
                             ProgressView()
                         }
                     }
-                    .frame(height: geometry.size.height * 0.5)
-                    
-                    VStack {
-                        Spacer(minLength: geometry.size.height * 0.5)
-                        
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text(place.name)
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .padding(.horizontal)
-                            
-                            Text(place.description)
-                                .font(.body)
-                                .padding(.horizontal)
-                            
-                            Map(coordinateRegion: .constant(MKCoordinateRegion(
-                                center: CLLocationCoordinate2D(latitude: CLLocationDegrees(place.coordinates[0]),
-                                                               longitude: CLLocationDegrees(place.coordinates[1])),
-                                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-                            )), interactionModes: [])
-                            .frame(height: 200)
-                            .disabled(true)
-                            
-                            Text(place.address)
-                                .font(.footnote)
-                                .padding(.horizontal)
-                            
-                        }
-                        .background(Color.white)
-                        .frame(width: geometry.size.width)
-                    }
                 }
             }
             .edgesIgnoringSafeArea(.top)
+            SinglePlaceText(place: place)
         }
     }
 }
@@ -73,9 +43,11 @@ struct SinglePlaceContentView: View {
             name: "Café Caron",
             description: "French restaurant with a lovely atmosphere, great for a Burgundian dinner with some cheese and wine. It will give you the perfect Paris bistro vibes with amazing food.",
             image: "https://localguidestorage.blob.core.windows.net/images/cafecaron.JPG",
-            keywords: ["Drinks", "Cozy"], neighbourhood: "Pijp",
+            keywords: ["Drinks", "Cozy"],
+            dishes: [],
+            neighbourhood: "Pijp",
             coordinates: [52.37287436362199, 4.8894113883891634],
-            address: "",
+            address: "Frans Halsstraat 12",
             rating: "4"
         ))
     }
@@ -83,6 +55,6 @@ struct SinglePlaceContentView: View {
 
 struct SinglePlaceContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SinglePlaceContentView()
     }
 }
