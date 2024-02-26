@@ -76,16 +76,7 @@ struct PlaceCard: View {
                     .padding(.top, 3)
                     .padding(.bottom, 6)
                 
-                HStack {
-                    if self.ratingInt >= 1 {
-                        ForEach(1 ... self.ratingInt, id: \.self) { _ in
-                            Image(systemName: "star.fill")
-                                .foregroundColor(LocalguideColor.darkblue)
-                                .font(.custom("Nunito-Bold", size: 8))
-                        }
-                    }
-                }
-                .padding(.bottom, 5)
+                RatingBlock(rating: ratingInt, fontSize: 8)
                 
                 HStack{
                     Image(systemName: "map.fill")
@@ -96,31 +87,7 @@ struct PlaceCard: View {
                         .foregroundColor(LocalguideColor.darkblue)
                 }
                 
-                HStack {
-                    HStack{
-                        Image(systemName: "fork.knife")
-                            .foregroundColor(.white)
-                            .font(.custom("Nunito-Bold", size: 12))
-                        Text(keywords[0])
-                            .foregroundColor(.white)
-                            .font(.custom("Nunito-Bold", size: 12))
-                    }
-                    .padding(4)
-                    .background(LocalguideColor.darkblue)
-                    .cornerRadius(5)
-                    
-                    HStack{
-                        Image(systemName: "mustache.fill")
-                            .foregroundColor(.white)
-                            .font(.custom("Nunito-Bold", size: 12))
-                        Text(keywords[1])
-                            .foregroundColor(.white)
-                            .font(.custom("Nunito-Bold", size: 12))
-                    }
-                    .padding(4)
-                    .background(LocalguideColor.darkblue)
-                    .cornerRadius(5)
-                }
+                KeywordsBlock(keywords: keywords, fontSize: 12)
             }
             .padding(5)
             Spacer()

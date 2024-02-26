@@ -41,8 +41,7 @@ struct SinglePlaceText: View {
                     Spacer(minLength: geometry.size.height * 0.35)
                     
                     VStack(alignment: .leading, spacing: 5) {
-                        Spacer()
-                            .frame(height: 8)
+                        Spacer().frame(height: 8)
                        
                         // title
                         HStack(){
@@ -56,51 +55,15 @@ struct SinglePlaceText: View {
                         }
                         .padding(.horizontal)
                         
-                        Spacer()
-                            .frame(height: 8)
+                        Spacer().frame(height: 8)
                         
                         // stars
-                        HStack {
-                            if self.ratingInt >= 1 {
-                                ForEach(1 ... self.ratingInt, id: \.self) { _ in
-                                    Image(systemName: "star.fill")
-                                        .foregroundColor(LocalguideColor.darkblue)
-                                        .font(.custom("Nunito-Bold", size: 12))
-                                }
-                            }
-                        }
-                        .padding(.horizontal)
+                        RatingBlock(rating: ratingInt, fontSize: 12)
                         
-                        Spacer()
-                            .frame(height: 8)
+                        Spacer().frame(height: 8)
                         
                         // keywords
-                        HStack {
-                            HStack{
-                                Image(systemName: "fork.knife")
-                                    .foregroundColor(.white)
-                                    .font(.custom("Nunito-Bold", size: 12))
-                                Text(keywords[0])
-                                    .foregroundColor(.white)
-                                    .font(.custom("Nunito-Bold", size: 12))
-                            }
-                            .padding(4)
-                            .background(LocalguideColor.darkblue)
-                            .cornerRadius(5)
-                            
-                            HStack{
-                                Image(systemName: "mustache.fill")
-                                    .foregroundColor(.white)
-                                    .font(.custom("Nunito-Bold", size: 12))
-                                Text(keywords[1])
-                                    .foregroundColor(.white)
-                                    .font(.custom("Nunito-Bold", size: 12))
-                            }
-                            .padding(4)
-                            .background(LocalguideColor.darkblue)
-                            .cornerRadius(5)
-                        }
-                        .padding(.horizontal)
+                        KeywordsBlock(keywords: keywords, fontSize: 12)
                         
                         Spacer()
                             .frame(height: 5)
@@ -126,31 +89,39 @@ struct SinglePlaceText: View {
                                     span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
                                 )), interactionModes: [])
                                 .cornerRadius(30)
-                                .frame(width: geometry.size.width * 0.90, height: 200) // 80% width
+                                .frame(width: geometry.size.width * 0.90, height: 200)
                                 Spacer()
+                                
                             }
                             
                             VStack(alignment: .leading) {
-                                Text(neighbourhood)
-                                    .font(.custom("Nunito-Bold", size: 18))
-                                    .foregroundColor(LocalguideColor.red)
+                                HStack(){
+                                    Text(neighbourhood)
+                                        .font(.custom("Nunito-Bold", size: 18))
+                                        .foregroundColor(LocalguideColor.red)
+                                        .padding(.horizontal)
+                                    Spacer()
+                                }
                                 
                                 Text(address)
                                     .font(.custom("Nunito-BoldItalic", size: 14))
                                     .foregroundColor(LocalguideColor.red)
+                                    .padding(.horizontal)
                                 
                                 Spacer()
                                     .frame(height: 10)
                             }
                             .frame(width: geometry.size.width)
                             
+                            Spacer()
+                                .frame(height: 10)
+                            
                         }
                         .background(LocalguideColor.beige)
                         .cornerRadius(30)
-                        .frame(width: geometry.size.width)
+                        .frame(width: geometry.size.width, height: 300)
                     }
                     .background(Color.white)
-                    .shadow(color: Color(red: 0.93, green: 0.93, blue: 0.93), radius: 4, x: 0.0, y: 2)
                     .cornerRadius(30)
                 }
             }

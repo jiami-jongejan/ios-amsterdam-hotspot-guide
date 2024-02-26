@@ -19,6 +19,8 @@
 		8E4B6FD629F4BB2800DEC71C /* HomeFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B6FD529F4BB2800DEC71C /* HomeFeed.swift */; };
 		8E4B6FE229F4C3B200DEC71C /* FullMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B6FE129F4C3B200DEC71C /* FullMapView.swift */; };
 		8E4B6FE729F53FD500DEC71C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B6FE629F53FD500DEC71C /* Service.swift */; };
+		8E54315F2B889A52000E7BB4 /* RatingBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54315E2B889A52000E7BB4 /* RatingBlock.swift */; };
+		8E5431612B889B92000E7BB4 /* KeywordsBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5431602B889B92000E7BB4 /* KeywordsBlock.swift */; };
 		8E671A6F29F498A800A56CEA /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671A6E29F498A800A56CEA /* Places.swift */; };
 		8E671A7329F4AA2F00A56CEA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E671A7229F4AA2F00A56CEA /* LoadingView.swift */; };
 		8EAD92BD29F5E0B100AB2253 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD92BB29F5E03000AB2253 /* Nunito-Bold.ttf */; };
@@ -69,6 +71,8 @@
 		8E4B6FD529F4BB2800DEC71C /* HomeFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeed.swift; sourceTree = "<group>"; };
 		8E4B6FE129F4C3B200DEC71C /* FullMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullMapView.swift; sourceTree = "<group>"; };
 		8E4B6FE629F53FD500DEC71C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		8E54315E2B889A52000E7BB4 /* RatingBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingBlock.swift; sourceTree = "<group>"; };
+		8E5431602B889B92000E7BB4 /* KeywordsBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsBlock.swift; sourceTree = "<group>"; };
 		8E671A6E29F498A800A56CEA /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		8E671A7229F4AA2F00A56CEA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8EAD92BA29F5E02F00AB2253 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 			children = (
 				8E4B6FD529F4BB2800DEC71C /* HomeFeed.swift */,
 				8EE6645C2B87483400C94F86 /* SinglePlace.swift */,
+				8E54315E2B889A52000E7BB4 /* RatingBlock.swift */,
+				8E5431602B889B92000E7BB4 /* KeywordsBlock.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -390,10 +396,12 @@
 				8EE0793729F402D500606E08 /* HomeFeedView.swift in Sources */,
 				8EE6645D2B87483400C94F86 /* SinglePlace.swift in Sources */,
 				8E4B6FD629F4BB2800DEC71C /* HomeFeed.swift in Sources */,
+				8E54315F2B889A52000E7BB4 /* RatingBlock.swift in Sources */,
 				8EE0793F29F406CB00606E08 /* Colors.swift in Sources */,
 				8E2AB55829F340AE00D1CF23 /* LocalguideApp.swift in Sources */,
 				8EE6645B2B86C02A00C94F86 /* IconMapper.swift in Sources */,
 				8EB9B04429F5FA10002BE7FE /* PostPlaceView.swift in Sources */,
+				8E5431612B889B92000E7BB4 /* KeywordsBlock.swift in Sources */,
 				8E4B6FE729F53FD500DEC71C /* Service.swift in Sources */,
 				8E2AB55F29F340AE00D1CF23 /* ContentView.swift in Sources */,
 				8EB9B04229F5F952002BE7FE /* FilteredFeedView.swift in Sources */,

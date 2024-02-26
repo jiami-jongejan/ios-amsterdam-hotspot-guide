@@ -23,7 +23,7 @@ struct ContentView: View {
                 Image(systemName: "magnifyingglass")
             }
             HomeFeedView().tabItem {
-                Image(systemName: "person.fill")
+                Image(systemName: "heart.fill")
             }
             .environmentObject(backend)
         }

@@ -10,6 +10,7 @@ import Foundation
 struct IconMapper {
     static func iconName(forCategory category: String) -> String {
         switch category.lowercased() {
+        // categories
         case "restaurant":
             return "fork.knife"
         case "bar":
@@ -24,6 +25,11 @@ struct IconMapper {
             return "wand.and.stars"
         case "hipster":
             return "mustache.fill"
+        // keywords
+        case "cozy":
+            return "fireplace.fill"
+        case "summer":
+            return "sun.max.fill"
         default:
             return "questionmark.circle"
         }
